@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="row py-5">
+        <div class="col-md-4 d-flex align-items-center">
+            <div class="title">
+                <h2> Trending <br>
+                    movies <br> 
+                    To Watch Now
+                </h2>
+                <p class="text-muted"> most Watched movies by days</p>
+            </div>
+        </div>
+        <div class="col-md-2 position-relative" *ngFor="let movie of trendingMovies">
+            <div class="item">
+                <img [src]=" imagePrefix+movie.poster_path" class="w-100" alt="" srcset="">
+                <h3>{{movie.title}}</h3>
+                <div class=" position-absolute top-0  end-0 bg-info p-2">{{movie.vote_average}}</div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="row py-5">
+        <div class="col-md-4 d-flex align-items-center">
+            <div class="title">
+                <h2> Trending <br>
+                    TV Shows <br> 
+                    To Watch Now
+                </h2>
+                <p class="text-muted"> most Watched TV Shows by days</p>
+            </div>
+        </div>
+        <div class="col-md-2 position-relative" *ngFor="let movie of trendingTv">
+            <div class="item">
+                <img [src]=" imagePrefix+movie.poster_path" class="w-100" alt="" srcset="">
+                <h3>{{movie.name}}</h3>
+                <div class=" position-absolute top-0  end-0 bg-info p-2">{{movie.vote_average}}</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row py-5">
+        <div class="col-md-4 d-flex align-items-center">
+            <div class="title">
+                <h2> Trending <br>
+                    People <br> 
+                    To Watch Now
+                </h2>
+                <p class="text-muted"> most Watched  People by days</p>
+            </div>
+        </div>
+        <div class="col-md-2 position-relative" *ngFor="let movie of trendingPeople">
+            <div class="item">
+                <img [src]=" movie.Prefix+movie.profile_path? imagePrefix+movie.profile_path: './../assets/profile.jpg'    " class="w-100" alt="" srcset="">
+                <h3>{{movie.name}}</h3>
+                <!-- <div class=" position-absolute top-0  end-0 bg-info p-2">{{movie.vote_average}}</div> -->
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>

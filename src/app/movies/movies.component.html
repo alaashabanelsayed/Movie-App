@@ -1,0 +1,22 @@
+<div class="container">
+
+    <input type="text" placeholder="search" class="form-control mt-5 bg-dark text-white "    [(ngModel)]= "searchItem"   >
+
+
+    <div class="row py-5 ">
+        
+        <div class="col-md-2 position-relative " *ngFor= "let movie of trendingMovies|search:searchItem">
+            <div class="item">
+                <a [routerLink] ="['/movieDetails/',movie.id]">
+                <img [src]=" imagePrefix+movie.poster_path" class="w-100 pb-4" alt="" srcset="">
+                <h3>{{movie.title|uppercase}}</h3>
+                <!-- <h3>{{movie.id}}</h3> -->
+                <div class=" position-absolute top-0  end-0 bg-info p-2">{{movie.vote_average|number:'1.0-1'}}</div>
+            </a>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>

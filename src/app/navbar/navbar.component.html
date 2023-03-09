@@ -1,0 +1,96 @@
+
+
+<div class="container">
+    <nav class="pt-3 d-flex  justify-content-between align-items-center">
+
+        <div class=" d-flex align-items-center">
+            <h3>movie App</h3>
+    
+            <ul class="ps-5 list-unstyled d-flex mb-0">
+                <li class=" mx-2" *ngIf="isLogin">
+                <a routerLink="home" routerLinkActive="active-route">Home</a>
+                </li>
+                <li class="mx-2" *ngIf="isLogin">
+                    <a routerLink="about" routerLinkActive="active-route"     > About</a>
+                </li>
+            
+                <li class="mx-2" *ngIf="isLogin">
+                    <a routerLink="contact"  routerLinkActive="active-route"   > Contact</a>
+                </li>
+        
+                <li class="mx-2" *ngIf="isLogin">
+                    <a routerLink="movies"  routerLinkActive="active-route"   > Movies</a>
+                </li>
+                
+                <li class="mx-2" *ngIf="isLogin">
+                    <a routerLink="Tv"  routerLinkActive="active-route"   > Tv shows</a>
+                </li>
+
+                <li class="mx-2" *ngIf="isLogin">
+                    <a routerLink="people"  routerLinkActive="active-route"   > People</a>
+                </li>
+                
+
+                
+            </ul>
+        </div>
+        
+    
+    
+        <div class="d-flex">
+            <ul class="list-unstyled d-flex mx-2 mb-0 pe-5">
+                <li class="mx-2 ">
+                    <i class="fab fa-facebook"></i>
+                </li>
+            
+                <li class="mx-2 ">
+                    <i class="fab fa-instagram"></i>
+                </li>
+            
+                <li class="mx-2 ">
+                    <i class="fab fa-twitter"></i>
+                </li>
+                <li class="mx-2 ">
+                    <i class="fab fa-youtube"></i>
+                </li>
+            </ul>
+            
+                
+                <ul class=" list-unstyled d-flex mb-0">
+                    <li class=" mx-2"  >
+                    <a routerLink="login" *ngIf="!isLogin"    routerLinkActive="active-route"     >Login</a>
+                    </li>
+                    <li class="mx-2" >
+                        <a routerLink="register" *ngIf="!isLogin"    routerLinkActive="active-route"     > Register</a>
+                    </li>
+                      
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" routerLink="settings" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          settings
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" routerLink="settings/privacy"    >Privacy</a></li>
+                          
+                        </ul>
+                      </li>
+
+
+
+
+
+
+
+                    <li class="mx-2">
+                        <span (click)="fireLogin()" *ngIf="isLogin"      > Log Out</span>
+                    </li>
+
+
+                </ul>
+        </div>
+    
+      
+    </nav>
+</div>
+
+
+

@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row py-5">
+       
+        <div class="col-md-2 py-4" *ngFor="let movie of trendingPeople">
+            <div class="item">
+                <img [src]=" movie.Prefix+movie.profile_path? imagePrefix+movie.profile_path: './../assets/profile.jpg'    " class="w-100" alt="" srcset="">
+                <h3>{{movie.name}}</h3>
+                <!-- <div class=" position-absolute top-0  end-0 bg-info p-2">{{movie.vote_average}}</div> -->
+            </div>
+        </div>
+    </div>
+
+</div>

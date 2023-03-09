@@ -1,0 +1,23 @@
+.title{
+
+    &::before{
+        content: "";
+        width: 25%;
+        height: 1px;
+        background-color: #8a8a8a3d;
+        display: inline-block;
+    }
+      
+
+    &::after{
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: #8a8a8a3d;
+        display: inline-block;
+    }
+
+
+
+    }
+    
